@@ -1,6 +1,6 @@
 ## NOGPU
 
-Useful is you have no local gpu.
+Useful if you have no local gpu.
 
 Builds a docker image (AGENT.VERSION.nogpu) that uses tensorflow-cpu and can be run locally. Also builds a normal gpu image (AGENT.VERSION) for pushing up to the contest site.  
 
