@@ -4,7 +4,7 @@ Useful is you have no local gpu.
 
 Builds a docker image (AGENT.VERSION.nogpu) that uses tensorflow-cpu and can be run locally. Also builds a normal gpu image (AGENT.VERSION) for pushing up to the contest site.  
 
-# Usage
+### Usage
 Add the NOGPU clause below to your agents docker file.
 ```
 #START NOGPU 
@@ -17,7 +17,7 @@ RUN if [ ${NOGPU} ]; then \
 ```
 $DOCKER_REGISTRY must be defined and you must be logged in as per https://contest.openai.com/details
 
-# Example
+### Example
 
 Assumes rainbow_agent.py and sonic_util.py from https://github.com/openai/retro-baselines/tree/master/agents are on path.
 ```
