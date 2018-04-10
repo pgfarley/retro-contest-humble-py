@@ -1,10 +1,11 @@
 ## NOGPU
 
-Useful is you have no local gpu. Build script and a sample docker file. 
+Useful is you have no local gpu.
 
-If you edit you docker file to include the NOGPU clause (below) in your docker file, build_nogpu.sh builds a docker image (AGENT.VERSION.nogpu) that uses tensorflow-cpu and can be run locally. The script also builds a normal gpu image (AGENT.VERSION) for pushing up to the contest site.  $DOCKER_REGISTRY must be defined and you must be logged in as per https://contest.openai.com/details
+Builds a docker image (AGENT.VERSION.nogpu) that uses tensorflow-cpu and can be run locally. Also builds a normal gpu image (AGENT.VERSION) for pushing up to the contest site.  
 
-
+# Usage
+Add the NOGPU clause below to your agents docker file.
 ```
 #START NOGPU 
 ARG NOGPU
@@ -14,6 +15,7 @@ RUN if [ ${NOGPU} ]; then \
     fi
 #END NOGPU
 ```
+$DOCKER_REGISTRY must be defined and you must be logged in as per https://contest.openai.com/details
 
 # Example
 
